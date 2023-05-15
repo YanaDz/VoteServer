@@ -32,7 +32,7 @@ public class VotingController {
         return pollFacade.createPoll(request);
     }
 
-    @GetMapping(value = "/")
+    @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public List<Poll> getAllPolls() {
         return pollFacade.getAllPolls();

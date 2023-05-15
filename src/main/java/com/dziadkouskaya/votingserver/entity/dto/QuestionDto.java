@@ -1,4 +1,4 @@
-package com.dziadkouskaya.votingserver.entity;
+package com.dziadkouskaya.votingserver.entity.dto;
 
 import com.dziadkouskaya.votingserver.enumeration.QuetionType;
 import lombok.AllArgsConstructor;
@@ -6,24 +6,21 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.extern.jackson.Jacksonized;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Document(value = "question")
 @Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Question {
-    @Id
-    private String id;
+@Jacksonized
+public class QuestionDto {
     @NonNull
     private String question;
     @NonNull
     private QuetionType pollItemType;
 
-    private List<String> availableAnswers = new ArrayList<>();
+    private List<String> availableAnswers;
 }

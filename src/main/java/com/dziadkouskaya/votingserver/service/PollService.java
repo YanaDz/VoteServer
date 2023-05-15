@@ -6,7 +6,7 @@ import com.dziadkouskaya.votingserver.entity.PollRequest;
 import java.util.List;
 
 public interface PollService {
-    Poll createPoll(PollRequest request);
+    Poll createPoll(Poll request);
 
     List<Poll> getAllPolls();
 

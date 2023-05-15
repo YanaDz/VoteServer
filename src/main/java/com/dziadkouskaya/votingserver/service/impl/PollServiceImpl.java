@@ -17,12 +17,12 @@ public class PollServiceImpl implements PollService {
     private final PollRepository pollRepo;
 
     @Override
-    public Poll createPoll(PollRequest request) {
-        return null;
+    public Poll createPoll(Poll poll) {
+        return pollRepo.save(poll);
     }
 
     @Override
     public List<Poll> getAllPolls() {
-        return null;
+        return pollRepo.findAll();
     }
 }

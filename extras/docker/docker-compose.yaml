@@ -12,6 +12,7 @@ services:
     container_name: mongo
     restart: unless-stopped
     environment:
+      name: voting
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: secret_mongo_password
     ports:
