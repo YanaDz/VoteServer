@@ -1,12 +1,12 @@
 package com.dziadkouskaya.votingserver.enumeration;
 
-public enum QuetionType implements BaseEnum<QuetionType> {
+public enum QuestionType implements BaseEnum<QuestionType> {
     CHECKBOX(1),
     RADIO(2);
 
     private final int code;
 
-    QuetionType(int code) {
+    QuestionType(int code) {
         this.code = code;
     }
 
@@ -15,10 +15,10 @@ public enum QuetionType implements BaseEnum<QuetionType> {
         return code;
     }
 
-    public static class Converter extends EnumConverter<QuetionType> {
+    public static class Converter extends EnumConverter<QuestionType> {
 
         public Converter() {
-            super(QuetionType.class);
+            super(QuestionType.class);
         }
     }
 }

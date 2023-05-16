@@ -19,7 +19,7 @@ dependencies {
 	implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
 	implementation 'io.springfox:springfox-swagger2:3.0.0'
 	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
-
+	implementation 'org.mongodb:mongodb-driver-sync:4.8.2'
 	compileOnly 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.projectlombok:lombok'

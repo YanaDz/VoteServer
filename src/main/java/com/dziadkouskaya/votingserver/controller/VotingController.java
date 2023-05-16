@@ -1,4 +1,4 @@
-package com.dziadkouskaya.votingserver.controller.handler;
+package com.dziadkouskaya.votingserver.controller;
 
 import com.dziadkouskaya.votingserver.entity.Poll;
 import com.dziadkouskaya.votingserver.entity.PollRequest;
