@@ -1,0 +1,23 @@
+version: '3'
+
+volumes:
+  votingserver-volume:
+
+networks:
+  votingserver-network:
+
+services:
+  mongo:
+    image: mongo
+    container_name: voting-mongo
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME = root
+      - MONGO_INITDB_ROOT_PASSWORD = secret_mongo_password
+      - database = Voting
+    ports:
+      - 27017:27017
+    networks:
+      - votingserver-network
+    volumes:
+      - ~/mongo/data:/data/voting

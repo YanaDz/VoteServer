@@ -1,6 +1,6 @@
 package com.dziadkouskaya.votingserver.facade.impl;
 
-import com.dziadkouskaya.votingserver.PollMapper;
+import com.dziadkouskaya.votingserver.mapper.PollMapper;
 import com.dziadkouskaya.votingserver.entity.Poll;
 import com.dziadkouskaya.votingserver.entity.PollRequest;
 import com.dziadkouskaya.votingserver.facade.PollFacade;

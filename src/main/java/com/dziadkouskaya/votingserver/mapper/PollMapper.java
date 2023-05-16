@@ -1,4 +1,4 @@
-package com.dziadkouskaya.votingserver;
+package com.dziadkouskaya.votingserver.mapper;
 
 import com.dziadkouskaya.votingserver.entity.Poll;
 import com.dziadkouskaya.votingserver.entity.PollRequest;
@@ -20,6 +20,7 @@ public interface PollMapper {
     @Mapping(target = "voutingEntityId", source = "request.voutingEntityId")
     @Mapping(target = "voterRoles", source = "request.voterRoles")
     Poll toEntity(PollRequest  request);
+
 
     Question toEntity(QuestionDto dto);
 

@@ -1,6 +1,6 @@
 package com.dziadkouskaya.votingserver.entity;
 
-import com.dziadkouskaya.votingserver.enumeration.QuetionType;
+import com.dziadkouskaya.votingserver.enumeration.QuestionType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,7 +23,7 @@ public class Question {
     @NonNull
     private String question;
     @NonNull
-    private QuetionType pollItemType;
+    private QuestionType questionType;
 
     private List<String> availableAnswers = new ArrayList<>();
 }
