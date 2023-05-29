@@ -6,6 +6,7 @@ import com.dziadkouskaya.votingserver.entity.Question;
 import com.dziadkouskaya.votingserver.entity.dto.QuestionDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.ReportingPolicy;
 
 import java.util.List;
@@ -21,8 +22,9 @@ public interface PollMapper {
     @Mapping(target = "voterRoles", source = "request.voterRoles")
     Poll toEntity(PollRequest  request);
 
-
     Question toEntity(QuestionDto dto);
+
+    Question updateQuestion(@MappingTarget Question question, QuestionDto dto);
 
     default List<Question> toQuestions(List<QuestionDto> dtos){
         return dtos.stream()

@@ -13,6 +13,7 @@ import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
+import org.springframework.data.mongodb.core.WriteResultChecking;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -30,7 +31,9 @@ public class MongoDBConfig {
 
     @Bean
     public MongoTemplate mongoTemplate() {
-        return new MongoTemplate(mongoDbFactory());
+        var template = new MongoTemplate(mongoDbFactory());
+        template.setWriteResultChecking(WriteResultChecking.EXCEPTION);
+        return template;
     }
 
     @Bean
